@@ -1,3 +1,3 @@
 FROM surrealdb/surrealdb:latest
-
-CMD ["start"]
+EXPOSE 8000
+CMD ["start", "--user", "root", "--pass", "CHANGEHERE", "file://data/srdb.db"]
